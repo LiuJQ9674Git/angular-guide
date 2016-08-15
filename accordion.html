@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh" ng-app="myApp">
+<head>
+    <script src="angular.js"></script>
+    <script src="accordionmmain.js"></script>
+</head>
+<body ng-app="myApp">
+<section ng-controller="TestController">
+    <accordion>
+        <expander class='expander' ng-repeat='expander in expanders' expander-title='expander.title'>
+            {{expander.text}}
+        </expander>
+    </accordion>
+</section>
+</body>
+</html>
+

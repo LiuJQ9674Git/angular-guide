@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="myApp">
+  <head>
+    <meta charset='UTF-8'>
+     <!-- Optional theme-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
+
+    <title>Alert Directive </title>
+    <script>
+      !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+                (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+              r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+      }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXX-X');
+      ga('send', 'pageview');
+    </script>
+
+    <style>
+        active{background:red}
+    </style>
+
+  </head>
+  <body>
+
+  <div ng-controller="AlertDemoCtrl">
+
+    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}"
+               close="closeAlert($index)">{{alert.msg}}</uib-alert>
+
+    <button type="button" class='btn btn-default' ng-click="addAlert()">Add Alert</button>
+
+  </div>
+
+  <script src="jquery.js"></script>
+  <script src="angular.js"></script>
+  <script src="bootstrap.js"></script>
+  <script src="http://cdn.bootcss.com/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.js"></script>
+  <script src="alertuidirective.js"></script>
+
+  </body>
+
+</html>

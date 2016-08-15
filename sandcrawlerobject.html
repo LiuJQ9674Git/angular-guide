@@ -1,0 +1,21 @@
+<!doctype html>
+ <html lang="zh" ng-app="myApp">
+ <head>
+  <meta charset="UTF-8">
+  <title>sandcrawler</title>
+ </head>
+ <body>
+
+
+ <div ng-controller="Sandcrawler">
+  <p>Location: {{obj.location}}</p>
+  <button ng-click="move('Mos Eisley South')">Move</button>
+  <div ng-controller="Droid">
+   <p>Location: {{obj.location}}</p>
+   <button ng-click="summon('Owen Farm')">Sell</button>
+  </div>
+ </div>
+  <script  src="angular.js"></script>
+  <script  src="sandcrawlerobject.js"></script>
+ </body>
+</html>

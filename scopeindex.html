@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular JS Hello World</title>
+    <script src="angular.js"></script>
+    <script src="scopeindex.js"></script>
+</head>
+<body>
+
+<div ng-controller="MyController">
+    Your name:
+    <input type="text" ng-model="username">
+    <button ng-click='sayHello()'>greet</button>
+    <hr>
+    {{greeting}}
+</div>
+
+</body>
+</html>

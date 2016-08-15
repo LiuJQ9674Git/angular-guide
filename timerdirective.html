@@ -1,0 +1,13 @@
+<!doctype html>
+<html ng-app="time">
+<head>
+    <script src="angular.js"></script>
+    <script src="timerdirective.js"></script>
+</head>
+<body>
+<div ng-controller="Ctrl2">
+    Date format: <input ng-model="format"> <hr/>
+    Current time is: <span my-current-time="format"></span>
+</div>
+</body>
+</html>

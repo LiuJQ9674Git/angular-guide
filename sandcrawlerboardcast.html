@@ -1,0 +1,20 @@
+<!doctype html>
+ <html lang="zh" ng-app="myApp">
+ <head>
+  <meta charset="UTF-8">
+  <title>sandcrawler</title>
+ </head>
+ <body>
+
+ <div ng-controller="Sandcrawler">
+  <p>Sandcrawler Location: {{location}}</p>
+  <button ng-click="recall()">Recall Droids</button>
+  <div ng-controller="Droid">
+   <p>Droid Location: {{location}}</p>
+  </div>
+ </div>
+
+ <script  src="angular.js"></script>
+  <script  src="sandcrawlerboardcast.js"></script>
+ </body>
+</html>

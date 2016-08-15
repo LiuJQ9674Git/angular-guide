@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="myApp">
+  <head>
+    <meta charset='UTF-8'>
+     <!-- Optional theme-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
+    <title>Alert Directive </title>
+    <script>
+      !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+                (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+              r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+      }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXX-X');
+      ga('send', 'pageview');
+    </script>
+
+    <style>
+        active{background:red}
+    </style>
+
+  </head>
+  <body>
+
+  <div ng-controller="AlertDemoCtrl">
+    <script type="text/ng-template" id="alert.html">
+      <div class="alert" style="background-color:#fa39c3;color:white" role="alert">
+        <button ng-show="closeable" type="button" class="close" ng-click="close()">
+          <span aria-hidden="false">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <div ng-transclude></div>
+      </div>
+    </script>
+
+    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+    <button class='btn btn-default' ng-click="addAlert()">Add Alert</button>
+  </div>
+
+  <p>Test Directives</p>
+
+  <div>
+      <div ng-controller="Ctrl">
+        <div my-customer></div>
+      </div>
+  </div>
+
+  <!-- 元素 -->
+  <div>
+    <hello>rrrrrrr</hello>
+  </div>
+  <hello>12345678</hello>
+
+  <!-- 属性-->
+  <div>
+    <div hello>rrraaaaaaa</div>
+  </div>
+
+  <!-- class -->
+  <div>
+    <div class="hello">eeeeeeedddddddddddd</div>
+  </div>
+
+  <script src="jquery.js"></script>
+  <script src="angular.js"></script>
+  <script src="bootstrap.js"></script>
+
+  <script src="alertdirective.js"></script>
+
+  </body>
+
+</html>

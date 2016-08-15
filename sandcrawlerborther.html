@@ -1,0 +1,28 @@
+<!doctype html>
+ <html lang="zh" ng-app="myApp">
+ <head>
+  <meta charset="UTF-8">
+  <title>sandcrawler</title>
+ </head>
+ <body>
+
+ <div ng-controller="Sandcrawler">
+  <div ng-controller="DroidRD">
+   <h2>R2-D2</h2>
+   <p>Droid status: {{status}}</p>
+   <p>Droid Location: {{location}}</p>
+   <button ng-click="executeDroidRecall()">Recall All Droids</button>
+  </div>
+  <div ng-controller="DroidCP">
+   <h2>C-3PO</h2>
+   <p>Droid status: {{status}}</p>
+   <p>Droid Location: {{location}}</p>
+   <button ng-click="executeDroidRecall()">Recall All Droids</button>
+  </div>
+ </div>
+
+
+  <script  src="angular.js"></script>
+  <script  src="sandcrawlerborther.js"></script>
+ </body>
+</html>

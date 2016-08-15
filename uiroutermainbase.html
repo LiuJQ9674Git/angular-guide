@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UI Router</title>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="uiroutermainbase.js"></script>
+</head>
+<body>
+<h1>AngularJS Home Page (Ui-router Demonstration)</h1>
+<!--
+<div data-ng-app="abcRouter">
+    <div ng-view>区块1</div>
+    <div ng-view>区块2</div>
+</div>
+-->
+
+<div data-ng-app="abcUIRouter">
+    <div ui-view></div>
+    <div ui-view="status"></div>
+
+</div>
+
+
+</body>
+<html>

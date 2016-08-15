@@ -1,0 +1,21 @@
+<!doctype html>
+ <html lang="zh" ng-app="myApp">
+ <head>
+  <meta charset="UTF-8">
+  <title>sandcrawler</title>
+ </head>
+ <body>
+
+ <div ng-controller="MainCtrl">
+  <input type="text" ng-model="test" />
+  <div ng-click="change()">click me </div>
+ </div>
+ <div ng-controller="sideCtrl">
+  <div ng-click="add()">my name {{name}}</div>
+ </div>
+
+
+  <script  src="angular.js"></script>
+  <script  src="sandcrawlerservice.js"></script>
+ </body>
+</html>

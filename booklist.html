@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>directive-dialog</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="Books.List">
+    <div >
+        <table border="1">
+            <tr>
+                <th>序号</th>
+                <th>书名</th>
+                <th>add</th>
+             </tr>
+            <tr ng-repeat="item in items">
+                <td>{{item.title}}</td>
+                <td>{{item.author}}</td>
+                <td>
+                <p><button add-book-button>Add book</button></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p>长度:{{items.length}}</p>
+    <p><button add-book-button>Add book</button></p>
+    <p> <button ng-click="add()">add</button></p>
+</div>
+
+<script src="booklist.js"></script>
+</body>
+</html>

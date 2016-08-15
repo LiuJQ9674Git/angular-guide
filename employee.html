@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular JS Hello World</title>
+    <script src="angular.js"></script>
+    <script src="employee.js"></script>
+</head>
+<body>
+
+<div ng-controller="EmployeeController">
+    Manager: {{employee.name}} [ {{department}} ]<br>
+    Reports:
+    <ul>
+        <li ng-repeat="employee in employee.reports">
+            {{employee.name}} [ {{department}} ]
+        </li>
+    </ul>
+    <hr>
+    {{greeting}}
+</div>
+
+</body>
+</html>

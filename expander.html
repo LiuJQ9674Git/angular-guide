@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh" ng-app="myApp">
+<head>
+    <script src="angular.js"></script>
+    <script src="expander.js"></script>
+</head>
+<body>
+
+<script type="text/ng-template" id="expanderTemp.html">
+    <div  class="mybox">
+        <div class="mytitle" ng-click="toggleText()">
+            {{mytitle}}
+        </div>
+        <div ng-transclude ng-show="showText">
+        </div>
+    </div>
+</script>
+<div ng-controller="testC">
+    <expander etitle="title">{{text}}</expander>
+</div>
+
+
+</body>
+</html>
+
